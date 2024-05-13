@@ -1,13 +1,11 @@
 n = int(input())
-nums = list(map(int, input().split()))
-sum = 0
+l = list(map(int, input().split()))
+cnt = 0
 
-for i in nums:
-    for j in range(2, i+1):
-        if i%j == 0:
-            if i == j:
-                sum += 1
-            else:
-                break
+for i in l:
+    if i <= 1: continue
+    for j in range(2, int(i**1/2)+1):
+        if i%j == 0: break
+    else: cnt += 1
 
-print(sum)
+print(cnt)
