@@ -1,14 +1,12 @@
+import sys
+
 while True:
-    a = input()
+    n = sys.stdin.readline()[:-1]
     
-    if int(a) == 0:
+    if n == '0':
         break
     
-    for i in range(0, int(len(a)/2)):
-        if a[i] == a[len(a)-1-i]:
-            continue
-        else:
-            print("no")
-            break
-    else:
+    if n == n[::-1]:
         print("yes")
+    else:
+        print("no")
