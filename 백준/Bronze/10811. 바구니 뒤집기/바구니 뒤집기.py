@@ -1,3 +1,7 @@
+import sys
+
+input = sys.stdin.readline
+
 n, m = map(int, input().split())
 
 a = [i for i in range(0, n+1)]
